@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import = "java.io.PrintWriter" %>  <!-- 출력 도와주는 객체 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +30,13 @@
 	-moz-user-select: none;
 	user-select: none;
 }
+
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
 	}
 }
+
 .b-example-divider {
 	height: 3rem;
 	background-color: rgba(0, 0, 0, .1);
@@ -44,21 +45,25 @@
 	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em
 		rgba(0, 0, 0, .15);
 }
+
 .b-example-vr {
 	flex-shrink: 0;
 	width: 1.5rem;
 	height: 100vh;
 }
+
 .bi {
 	vertical-align: -.125em;
 	fill: currentColor;
 }
+
 .nav-scroller {
 	position: relative;
 	z-index: 2;
 	height: 2.75rem;
 	overflow-y: hidden;
 }
+
 .nav-scroller .nav {
 	display: flex;
 	flex-wrap: nowrap;
@@ -70,28 +75,28 @@
 	-webkit-overflow-scrolling: touch;
 }
 </style>
- 
- 
+
+
 <!-- Custom styles for this template -->
 <link href="resources/css/signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
 
 <%
-	//현재 로그인 되어있으면 회원가입 하면 로그인 되어있다고 알려주기 
+	//현재 로그인이 되어있는데 회원가입을 하면 로그인 되어있다고 알려주기
 	String userID = null;
-	if(session.getAttribute("userID") != null){	// 세션의 userID가 비어있지 않으면 가져오기
+	if(session.getAttribute("userID") != null){	//세션의 userID가 비어있지않으면 가져오기
 		userID = (String)session.getAttribute("userID");
 	}
 	if(userID != null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('이미 로그인 되어있습니다.')");
+		script.println("alert('이미 로그인이 되어있습니다.')");
 		script.println("location.href='index.jsp'");
 		script.println("</script>");
 	}
-
 %>
+
 
 	<!-- form안의 데이터들이 submit이 되면 name의 이름을 가지고 백단에 날아간다. -->
 	<main class="form-signin w-100 m-auto">

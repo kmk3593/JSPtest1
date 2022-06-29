@@ -15,12 +15,15 @@
 </form>
 
 <%
+
 //1. 주소 드러나는 방식
 /* String resultFromB = (String)request.getParameter("result");
 out.println(resultFromB); */
+
 //2. 주소 숨기는 방식
 String resultFromB = String.valueOf(pageContext.getSession().getAttribute("result"));
 out.println(resultFromB);
+
 %>
 </body>
 </html>

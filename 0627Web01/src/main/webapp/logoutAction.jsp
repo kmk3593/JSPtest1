@@ -7,12 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
-	session.invalidate();	// 세션값 제거
+	session.invalidate();	//세션값 제거
 %>
 
 <script>
-	location.href = 'index.jsp';	
+	location.href = 'index.jsp';
 </script>
 
 </body>
