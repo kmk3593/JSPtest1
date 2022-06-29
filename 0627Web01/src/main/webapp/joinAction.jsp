@@ -20,6 +20,21 @@
 <body>
 
 <%
+	//현재 로그인 되어있으면 회원가입 하면 로그인 되어있다고 알려주기 
+	String userID = null;
+	if(session.getAttribute("userID") != null){	// 세션의 userID가 비어있지 않으면 가져오기
+		userID = (String)session.getAttribute("userID");
+	}
+	if(userID != null){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('이미 로그인 되어있습니다.')");
+		script.println("location.href='index.jsp'");
+		script.println("</script>");
+	}
+
+
+
 	if(user.getUserID()==null || user.getUserPassword()==null || user.getUserName()==null || user.getUserGender()==null){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");

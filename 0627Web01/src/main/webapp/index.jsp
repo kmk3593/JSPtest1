@@ -18,8 +18,13 @@
 		}
 	%> --%>
 	
+
+	
+	
+	<a href="signup.jsp">게시판목록</a>
 	<a href="signup.jsp">로그인</a>
 	<a href="join.jsp">회원가입</a>
+	<a href="logoutAction.jsp">로그아웃</a>
 	
 </body>
 </html>
