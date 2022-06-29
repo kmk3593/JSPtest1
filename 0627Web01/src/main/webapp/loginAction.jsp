@@ -6,14 +6,16 @@
 <jsp:useBean id="user" class="user.User" scope="page" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPassword" />
+<jsp:setProperty name="user" property="userName" />
+<jsp:setProperty name="user" property="userGender" />
 
 <!-- jsp 에서 클래스의 setter함수를 호출한것과 마찬가지 -->
 <!DOCTYPE html>
 
-<html>
+<html> 
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인액션</title>
 </head>
 <body>
 
@@ -32,7 +34,7 @@
 	}
 
 
-
+ 
 	UserDAO userDAO = new UserDAO();
 	int result = userDAO.login(user.getUserID(), user.getUserPassword());
 	//로그인함수 실행 결과값에 따라서 화면으로 뿌려줄 스크립트 생성

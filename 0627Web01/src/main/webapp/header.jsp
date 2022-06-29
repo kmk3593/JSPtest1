@@ -14,7 +14,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
 
     
-
+ 
     
 
 <link href="./resources/assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -123,7 +123,8 @@
 	        <button type="button" class="btn btn-primary" onclick="location.href='join.jsp'">회원가입</button>
         </c:if>
         <!-- 세션이 비어있지 않을때만 로그아웃버튼 노출 -->
-        <c:if test="${!empty sessionScope.userID }">
+        <c:if test="${!empty sessionScope.userID }">   
+        	<c:out value="${sessionScope.userID }" />
         	<button type="button" class="btn btn-primary" onclick="location.href='logoutAction.jsp'">로그아웃</button>
       	</c:if>
       </div>
