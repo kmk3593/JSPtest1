@@ -7,19 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%-- 
 	<div>Hello</div>
 	<div>안녕 세상</div>
 	<%= new java.util.Date() %>
 		<br>
 	<%
 		for(int i=0; i<10; i++){
-			out.println(i);
-		
-			
-			
+			out.println(i);			 
 		}
-	%>
+	%> --%>
 	
 	<a href="signup.jsp">로그인</a>
 	<a href="join.jsp">회원가입</a>
